@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-feature:
-    runs-on: ubuntu-latest
+    runs-on: windows
     steps:
       - name: Check out the code
         uses: actions/checkout@v4
@@ -29,4 +29,7 @@ jobs:
         run: ng version
 
       - name: Build Angular Project
+        run: |
+          ng build
+          echo "run test and build angular app"
      
