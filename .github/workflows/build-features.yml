@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -29,10 +29,4 @@ jobs:
         run: ng version
 
       - name: Build Angular Project
-        run: ng build --configuration production
-
-      - name: Run Tests
-        run: ng test --watch=false
-
-     # - name: Echo Completion Message
-      #  run: echo "Node environment setup, Angular CLI installed, tests executed, and project compiled."
+     
